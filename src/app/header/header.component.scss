@@ -1,0 +1,58 @@
+
+
+.title{
+   
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    font-family: 'Satisfy', cursive;
+   // font-family: 'Barlow Semi Condensed', sans-serif;
+
+
+}
+.header{
+   // background: radial-gradient(circle,rgb(131, 130, 130),rgb(199, 192, 192));
+   //background: #cc720c;
+   background: linear-gradient(#492905, #cc720c);
+    border: 0.7px solid #1111;
+    height: 70px;
+    width: auto;
+    display: flex;
+    .menu {
+    
+        padding: 10px;
+    }
+    .menu:hover{
+        background: radial-gradient(circle,rgb(200, 193, 193),rgb(212, 205, 205));
+        border-radius: 50%;
+    }
+    .logo{
+         
+        padding: 20px;
+    }
+    
+    
+    .cart{
+        margin-left: auto;
+        padding: 10px;
+    }
+    .cart:hover{
+        background: radial-gradient(circle,rgb(200, 193, 193),rgb(212, 205, 205));
+        border-radius: 50%;
+    }
+    
+    .search{
+        padding: 10px;
+    }
+    .search:hover{
+        background: radial-gradient(circle,rgb(200, 193, 193),rgb(212, 205, 205));
+        border-radius: 50%;
+    }
+    
+}
+
+
+

@@ -1,0 +1,86 @@
+.footer{
+    background: radial-gradient(circle,rgb(131, 130, 130),rgb(199, 192, 192));
+    border: 0.7px solid #1111;
+    height: 300px;
+    background: linear-gradient(#492905, #cc720c);
+}
+.help{
+    display: inline;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+
+    button{
+        background: white;
+        border-radius: 50%;
+        margin: 20px;
+        width: 70px;
+        height: 70px;
+    }
+    button:hover{
+        background: radial-gradient(circle,rgb(190, 183, 183),rgb(199, 192, 192));
+    }
+    
+}
+.text{
+    display: flex;
+    justify-content: center;
+    
+    h6{
+        margin-left: 30px;
+        margin-right: 20px;
+        color: white;
+        
+    }
+    
+}
+.list-footer{
+    padding-top: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    background: black;
+    div{
+        margin-bottom: 40px;
+        color: white;
+    }
+    button{
+        
+        background: white;
+        
+        border-radius:51% ;
+    }
+    button:hover{
+        background: radial-gradient(circle,rgb(199, 192, 192),rgb(131, 130, 130));
+       
+    }
+    img{
+        
+        border-radius: 50%;
+    }
+}
+.footer-end{
+    background: radial-gradient(circle,rgb(131, 130, 130),rgb(199, 192, 192));
+    border: 0.7px solid #1111;
+    height: 90px;
+    background: linear-gradient(#492905, #cc720c);
+   // margin-top: 20px;
+}
+
+@media screen and (max-width: 360px) {
+    .list-footer{
+        margin-top:90px;
+        h4{
+            font-size: medium;
+        }
+        h5{
+            font-size: small;
+        }
+
+    }
+    
+   
+}

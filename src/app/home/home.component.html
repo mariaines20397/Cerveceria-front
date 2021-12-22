@@ -1,0 +1,111 @@
+
+<div class="body">
+<div class="container-lg  container-xs">
+  
+    <div class="card-lg card-xs " *ngFor="let product of arrProducts" >
+        <img src="{{product.img}}" class="card-img-top img-beer" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> <b> {{product.name}} </b></h5>
+          <p class="card-text">{{product.description}}</p>
+          <p class="card-price"> <b> ${{product.price}}</b></p>
+
+          
+        </div> 
+        <a href="#" class="btn btn-add "> <b> AGREGAR</b></a>
+      </div>
+      
+      <div class="card-lg card-xs card-vinos" >
+        <div class="card-body">
+          <p class="card-text">Sigue marcando</p>
+          <h5 class="card-title">Vinos</h5>
+        </div> 
+       
+      </div>
+ 
+     
+</div>
+</div>
+
+<ng-template #filter let-modal >
+ <!-----------------------------------MODAL FILTRO TIPO DE CER---------------------------->
+  <div class="modal-header ">
+    <h1 class="modal-title"> <b> Filtros</b></h1>
+    <button class="btn btn-close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body ">
+    <table class="table table-sm table-hover modal-table" id="table">
+      
+      <tbody >
+        <tr *ngFor="let filter of productFilter;index as i">
+          <th class="type-filter"> <h5> <b> {{filter.name}} </b> </h5> </th>
+          <th class="options" > <input type="{{filter.type}}" value="{{filter.id}}"   (click)="filtrar($event)" (click)="activarBtn()" [checked]="filter.checked" id="option" name="option">  </th>
+      
+      
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="footer-modal">
+ 
+      <button class="btn clear-filter " id="clear" name="clear"  (click)="clear()"  disabled> <h6><b > LIMPIAR</b></h6></button>
+      <button class="btn filter" id="filtrar" name="filtrar"  (click)="modal.close()"><img src="../../assets/svg/filters.svg" alt="" srcset="">FILTRAR </button>
+     
+  </div>
+
+  <!-----------------------------------MODAL FILTRO PRECIO---------------------------->
+  <div class="modal-header ">
+    <h1 class="modal-title"> <b> Filtros Precios</b></h1>
+    <button class="btn btn-close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body ">
+   <table class="table table-sm table-hover" id="table">
+    
+    <tbody >
+      <tr *ngFor="let filter of priceFilter;index as i">
+        <th class="type-filter"> <h5> <b> {{filter.name}} </b> </h5> </th>
+        <th class="options" > <input type="{{filter.type}}" value="{{filter.id}}"   (click)="filtrarPrice($event)" (click)="activarBtnPrice($event)" [checked]="filter.checked" id="option" name="option">  </th>
+    
+    
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="footer-modal">
+    <button class="btn clear-filter " id="clearPrice" name="clear"  (click)="clearPrice()"  [disabled]="true"> <h6><b > LIMPIAR</b></h6></button>
+    <button class="btn filter" id="filtrar" name="filtrar"  (click)="modal.close()"><img src="../../assets/svg/filters.svg" alt="" srcset="">FILTRAR </button>
+   
+  </div>
+</ng-template>
+<ng-template #filterPrice let-modal>
+  <div class="modal-header ">
+    <h1 class="modal-title"> <b> Filtros Precios</b></h1>
+    <button class="btn btn-close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body ">
+   <table class="table table-sm table-hover" id="table">
+    
+    <tbody >
+      <tr *ngFor="let filter of priceFilter;index as i">
+        <th class="type-filter"> <h5> <b> {{filter.name}} </b> </h5> </th>
+        <th class="options" > <input type="{{filter.type}}" value="{{filter.id}}"   (click)="filtrarPrice($event)" (click)="activarBtnPrice($event)" [checked]="filter.checked" id="option" name="option">  </th>
+    
+    
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="footer-modal">
+<!-- <input type="button" class="btn clear-filte" value="" id="clear" name="clear"  (click)="clear()" [disabled]="true">-->
+    <button class="btn clear-filter " id="clearPrice" name="clear"  (click)="clearPrice()"  [disabled]="true"> <h6><b > LIMPIAR</b></h6></button>
+    <button class="btn filter" id="filtrar" name="filtrar"  (click)="modal.close()"><img src="../../assets/svg/filters.svg" alt="" srcset="">FILTRAR </button>
+   <!-- <button class="btn filter"  >   <h6><b> FILTRAR  </b></h6><img src="../../assets/svg/filters.svg" alt="" srcset=""> </button>-->
+  </div>
+
+  
+</ng-template>
+
+<div class="div-filter">
+
+<button class="btn btn-filter  "  (click)="modal.open(filter)"> <img src="../../assets/svg/filters.svg" alt="" srcset="" ></button> 
+
+</div>

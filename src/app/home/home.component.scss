@@ -1,0 +1,185 @@
+@import '../../styles.scss';
+
+.body{
+    background: $dark;
+    padding-bottom: 25px;
+}
+
+.container-lg{
+    display: grid;
+    grid-template-columns: repeat(4,5fr) ;
+    grid-gap: 15px;
+    
+  //  border:2px solid white;
+    
+}
+.card-lg{
+    width: 15rem;
+    text-align: center;
+    border: 1px solid $dark;
+    border-radius: 1%;
+    
+    color: $white;
+  //  background: linear-gradient(#b47d1f, #8b6018);
+}
+.card-body{
+    background: $degrade-card;
+}
+.img-beer{
+    background: $white;
+    
+    
+}
+.card-text{
+    height: 70px;
+}
+.btn-add{
+   
+    width: 100%;
+   // background: #cc720c;
+   background: $degrade-header-footer;
+    color: $white;
+    //border: none;
+    
+}
+.div-filter{
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+}
+.btn-filter{
+    position: fixed;
+    bottom: 20px ;
+    text-align: center;
+    height: 60px;
+    width: 80px;
+    background: $white;
+    border: 2px solid $dark;
+    border-radius: 50%;
+    
+}
+.btn-filter:hover{
+    background: $hover-filter;
+     border: 2px solid $white;
+     transform: translateY(-10%)
+
+}
+
+.card-vinos{
+   
+   grid-column: 1/ span 2;
+}
+.btn-close{
+    position: absolute;
+    right: 0px;
+}
+.title-table{
+    text-align: center;
+}
+.type-filter{
+   padding-left:80px ;
+}
+.footer-modal{
+    background: $degrade-header-footer;
+    
+    display: flex;
+    justify-content: center;
+}
+.filter{
+    display: flex;
+    text-align: center;
+    color: $dark;
+    width: 120px;
+    background: $medium-blue;
+    margin: 15px;
+
+    
+}
+.clear-filter{
+   // background: salmon;
+    text-align: center;
+    color: $dark;
+    width: 120px;
+    margin: 15px;
+    border: 2px solid $dark;
+    
+    
+}
+
+/*
+.card:nth-child(9){
+    grid-column: 1/ span 2;
+}
+.card:nth-child(10){
+    grid-column: 3/span 2;
+}*/
+@media screen and (max-width: 768px) {
+    .container-xs{
+        display: grid;
+        grid-template-columns: repeat(3, 18fr);
+        grid-gap: 5px;
+    }
+    
+   
+}
+
+@media screen and (max-width: 576px) {
+    .container-xs{
+        display: grid;
+        grid-template-columns: repeat(2, 18fr);
+        grid-gap: 5px;
+    }
+    
+   
+}
+@media screen and (max-width: 360px) {
+    .container-xs{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 3px;
+        
+    }
+    .card-lg{
+        width: 10rem;
+        text-align: center;
+        border: 1px solid $dark;
+        border-radius: 1%;
+        .card-title{
+            font-size: medium;
+        }
+        .card-text{
+            font-size: small;
+        }
+        .card-price{
+            font-size: medium;
+        }
+        
+    }
+    .btn-filter{
+        position: fixed;
+        bottom: 20px ;
+        text-align: center;
+        width: 60px;
+        background: $reverse-hover-filter;
+        
+        border-radius: 50%;
+    }
+    .btn-filter:hover{
+        background: $hover-filter;
+         border: 2px solid $white;
+    }
+   
+}
+
+
+/*
+.mobile {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .logo {
+        font-family: 'Neo Sans';
+    }
+}*/

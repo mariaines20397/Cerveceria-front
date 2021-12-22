@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap';
+
+
+/* Variables */
+$dark: #000000;
+$light: #FFFDFD;
+$light-blue: #005790;
+$medium-blue: #006EAB;
+$degrade-card: linear-gradient(#373738, #75797a);
+$degrade-header-footer:linear-gradient(#492905, #cc720c);
+$hover-filter:radial-gradient(circle,rgb(199, 192, 192),rgb(131, 130, 130));
+$reverse-hover-filter:radial-gradient(circle,rgb(131, 130, 130),rgb(199, 192, 192));
