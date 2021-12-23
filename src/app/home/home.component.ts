@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { products } from './products';
 import { ProductService } from '../product.service';
+import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-home',
@@ -11,6 +13,7 @@ import { ProductService } from '../product.service';
 })
 
 export class HomeComponent implements OnInit {
+ 
   /**
    * Array que contiene los elementos de product.ts usado en la funcion de filtrar y 
    * filtrarPrice, tambien usado para mostrar los elementos en pantalla
@@ -40,6 +43,7 @@ export class HomeComponent implements OnInit {
    * que se pasará en el input y el estado del checked del checkbox que inicialmente se lo 
    * coloca en false
    */
+  
    productFilter:any[]=[
     {name:'Rubia', id:1, type: "checkbox", checked:false}, 
     {name:'Morena', id:2, type: "checkbox", checked:false},
@@ -56,19 +60,21 @@ export class HomeComponent implements OnInit {
     {name:'Menor a $200000', id:200000, type: "checkbox", checked:false},
     {name:'Menor a $400000', id:400000, type: "checkbox", checked:false}
    ];
+   
    /**
     * Se pasa como parametro del constructor el modal y el servicio
     * @param modal Parametro de tipo NgbModal
     * @param productService Parametro de tipo ProductService
     */
-   
-  constructor(public modal:NgbModal, public productService:ProductService ) {
     
+  constructor(public modal:NgbModal, public productService:ProductService, private translate:TranslateService ) {
+    this.translate.get('HELLO').subscribe((res:string)=> res)
    }
   
   ngOnInit(): void {
-    
+  
    }
+  
    /**
     * Funcion Filtrar, filtra los elementos según el tipo de cerveza que el usuario seleccione.
     * 

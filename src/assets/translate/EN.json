@@ -1,0 +1,33 @@
+{
+    "TITLE":"Beers",
+    "HEADER":{
+        "IDIOM":"Lenguage"
+    },
+    "HOME":{
+        "ADD":"ADD",
+        "FILTER":"FILTERS",
+        "FILTER.PRICE":"FILTERS PRICE",
+        "FILTER.BLOND": "Blond",
+        "CLEAN":"CLEAN",
+        "FILTERS":"FILTER",
+        "CONTINUE":"Continue Choosing",
+        "WINE":"Wine"
+    },
+    "FOOTER":{
+        "HELP":"We can help you?",
+        "CHART":"CHAT",
+        "CALL":"CALL",
+        "ABOUTUS": "ABOUT US",
+        "SECURITY": "SECURITY MEASURES (COVID-19)",
+        "HOWTOCALL": "HOW TO CALL",
+        "PROVIDER": "PROVIDER",
+        "CONTACT": "CONTACT",
+        "COVERAGE": "COVERAGE AREA",
+        "POLITICS":"PERSONAL DATA PROCESSING POLICY"
+    },
+    "TRANSLATION": {
+        "SPANISH": "Español",
+        "ENGLISH": "Inglés"
+      }
+    
+}

@@ -4,11 +4,29 @@
 <div class="header ">
     <div class="menu"><button class="btn"><img src="../../assets/svg/menu.svg" alt="" srcset=""></button></div>
     <div class="logo"><img src="../../assets/svg/logo.svg" alt="" srcset=""></div>
+
+    <div class=" lang">
+        <input type="checkbox"  id="btn-lang">
+        <div class="btn-lang">
+            <label for="btn-lang"> <b> {{"HEADER.IDIOM" | translate}} </b> </label>
+            
+        </div>
+        <div class="option-lang">
+        <p (click)="changeLang('ES')" [ngClass]="{'active': activeLang === 'ES'}"><img src="../../assets/svg/argentina.svg" alt="" srcset=""></p>
+        <p (click)="changeLang('EN')" [ngClass]="{'active': activeLang === 'EN'}"><img src="../../assets/svg/eeuu.svg" alt="" srcset=""></p>
+    </div>
+    
+    </div>
+
     <div class="cart"><button class="btn"><img src="../../assets/svg/cart.svg" alt="" srcset=""></button></div>
     <div class="search"><button class="btn"><img src="../../assets/svg/search.svg" alt="" srcset=""></button></div>
     
 </div>
 <div class="title" >
-    <h1 id='title'>{{title}}</h1>
+    
+    <h1 id='title'>{{'TITLE' | translate}}</h1>
+    
 </div>
+
+
 

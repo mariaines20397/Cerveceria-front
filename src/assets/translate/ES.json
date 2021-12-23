@@ -1,0 +1,32 @@
+{
+    "TITLE":"Cervezas",
+    "HEADER":{
+        "IDIOM":"Lenguaje"
+    },
+    "HOME":{
+        "ADD":"AGREGAR",
+        "FILTER":"FILTROS",
+        "FILTER.PRICE":"FILTRO DE PRECIOS",
+        "CONTINUE":"Sigue marcando",
+        "WINE":"VINOS",
+        "CLEAN":"LIMPIAR",
+        "FILTERS":"FILTRAR"
+    },
+    "FOOTER":{
+        "HELP":"¿Podemos ayudarte?",
+        "CHART":"CHAT",
+        "CALL":"LLAMAR",
+        "ABOUTUS": "SOBRE NOSOTROS",
+        "SECURITY": "MEDIDAS DE SEGURIDAD (COVID-19)",
+        "HOWTOCALL": "COMO MARCAR",
+        "PROVIDER": "PROOVEDORES",
+        "CONTACT": "CONTÁCTENOS",
+        "COVERAGE": "ZONA DE COVERTURA",
+        "POLITICS":"POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES"
+    },
+    "TRANSLATION": {
+        "SPANISH": "Español",
+        "ENGLISH": "Inglés"
+      }
+
+}
