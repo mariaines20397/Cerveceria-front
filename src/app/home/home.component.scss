@@ -1,5 +1,9 @@
 @import '../../styles.scss';
-
+*{
+    
+font-family: $font-family;
+font-size: 1.2rem;
+}
 .body{
     background: $dark;
     padding-bottom: 25px;
@@ -10,25 +14,19 @@
     grid-template-columns: repeat(4,5fr) ;
     grid-gap: 15px;
     
-  //  border:2px solid white;
-    
 }
 .card-lg{
     width: 15rem;
     text-align: center;
     border: 1px solid $dark;
     border-radius: 1%;
-    
     color: $white;
-  //  background: linear-gradient(#b47d1f, #8b6018);
 }
 .card-body{
     background: $degrade-card;
 }
 .img-beer{
-    background: $white;
-    
-    
+    background: $white;    
 }
 .card-text{
     height: 70px;
@@ -80,59 +78,6 @@
      opacity: 1;
      visibility: visible;
  }
- /*
-.option-filt p{
-    display: block;
-    width: 55px;
-    height: 40px;
-    line-height: 55px;
-    text-align: center;
-   transition: all 500ms ease;
-}
-
-.btn-filt{
-    display: flex;
-    color: $white;
-   
-    line-height: 65px;
-    text-align: center;
-   transition: all 500ms ease;
-}
-
-.option-filt p{
-    margin: -5px;
-    opacity: 0;
-    visibility: hidden;
-}
-#btn-filt:checked~ .option-filt p{
-    margin-bottom: 10px;
-    opacity: 1;
-    visibility: visible;
-
-}
-.btn-filter{
-    position: fixed;
-    bottom: 20px ;
-    text-align: center;
-    height: 60px;
-    width: 80px;
-    background: $white;
-    border: 2px solid $dark;
-    border-radius: 50%;
-    
-}
-.div-filter{
-    display: flex;
-    justify-content: right;
-    padding-right: 20px;
-}
-
-.btn-filter:hover{
-    background: $hover-filter;
-     border: 2px solid $white;
-     transform: translateY(-10%)
-
-}*/
 
 .card-vinos{
    
@@ -191,13 +136,7 @@
     
 }
 
-/*
-.card:nth-child(9){
-    grid-column: 1/ span 2;
-}
-.card:nth-child(10){
-    grid-column: 3/span 2;
-}*/
+
 @media screen and (max-width: 768px) {
     .container-xs{
         display: grid;
@@ -285,15 +224,3 @@
    
 }
 
-
-/*
-.mobile {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    .logo {
-        font-family: 'Neo Sans';
-    }
-}*/

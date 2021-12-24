@@ -1,4 +1,4 @@
-import { NONE_TYPE } from '@angular/compiler';
+import { NONE_TYPE, ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { products } from './products';
@@ -37,29 +37,16 @@ export class HomeComponent implements OnInit {
    * filtrar y filtrarPrice para ser recorrido por for.
    */
   newArray:any=[]
-  
   /**
-   * Array que contiene el tipo de cerveza, el id de cada elemento, el tipo de elemento
-   * que se pasará en el input y el estado del checked del checkbox que inicialmente se lo 
-   * coloca en false
+   * Array para traer los valores de productFilter desde el servicio
    */
   
-   productFilter:any[]=[
-    {name:'Rubia', id:1, type: "checkbox", checked:false}, 
-    {name:'Morena', id:2, type: "checkbox", checked:false},
-    {name:'Roja', id:3, type: "checkbox", checked:false}
-   ];
-   /**
-   * Array que contiene el nombre que se mostrara en el modal, el id de cada elemento, 
-   * el tipo de elemento que se pasará en el input y el estado del checked del checkbox 
-   * que inicialmente se lo coloca en false
+   productFilter:any[]=[]
+  /**
+   * Array para traer los valores de priceFilter desde el servicio
    */
-   priceFilter:any[]=[
-    {name:'Menor a $80000', id:80000, type: "checkbox", checked:false}, 
-    {name:'Menor a $90000', id:90000, type: "checkbox", checked:false},
-    {name:'Menor a $200000', id:200000, type: "checkbox", checked:false},
-    {name:'Menor a $400000', id:400000, type: "checkbox", checked:false}
-   ];
+   
+   priceFilter:any[]=[];
    
    /**
     * Se pasa como parametro del constructor el modal y el servicio
@@ -68,7 +55,8 @@ export class HomeComponent implements OnInit {
     */
     
   constructor(public modal:NgbModal, public productService:ProductService, private translate:TranslateService ) {
-    this.translate.get('HELLO').subscribe((res:string)=> res)
+    this.productFilter=this.productService.obtenerProductFilter()
+    this.priceFilter=this.productService.obtenerPriceFilter()
    }
   
   ngOnInit(): void {

@@ -1,0 +1,30 @@
+@import '../../styles.scss';
+
+.container{
+    background: $footer-modal;
+    color: $white;
+    font-family: $font-family;
+    border-radius: 10%;
+    .header{
+        text-align: center;
+        font-size: 1.5rem;
+        padding-top: 50px;
+    }
+    .body{
+        font-size: 1.2rem;
+        text-align: justify;
+        padding-bottom: 50px;
+    }
+    .footer{
+        font-size: 1.2rem;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+        
+
+    
+}
+.gral{
+    background: $dark;
+    padding-bottom: 50px;
+}
