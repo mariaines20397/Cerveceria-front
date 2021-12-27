@@ -28,7 +28,7 @@ export const vodka = [
         "filterId": 1
     },
     {
-        "name": "Absolut Raspberry",
+        "name": "Absolut Raspberri",
         "description": "The Lost Abbey Citrus Sin American Wild Ale 750ml.",
         "price": 75000,
         "img": "../../assets/img/vodka/raspberri.png",

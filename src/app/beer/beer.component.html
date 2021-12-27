@@ -18,7 +18,7 @@
 
           
         </div> 
-        <a href="#" class="btn btn-add " > <b> {{'HOME.ADD' | translate}} </b></a>
+        <a href="#" class="btn btn-add " > <b> {{'BEER.ADD' | translate}} </b></a>
       </div>
       
       
@@ -30,7 +30,7 @@
 <ng-template #filter let-modal >
  <!-----------------------------------MODAL FILTRO TIPO DE CER---------------------------->
   <div class="modal-header ">
-    <h1 class="modal-title"> <b> {{'HOME.FILTER' | translate}}</b></h1>
+    <h1 class="modal-title"> <b> {{'BEER.FILTER' | translate}}</b></h1>
     <button class="btn btn-close" (click)="modal.dismiss()"></button>
   </div>
   <div class="modal-body ">
@@ -48,8 +48,8 @@
   </div>
   <div class="footer-modal">
  
-      <button class="btn clear-filter " id="clear" name="clear"  (click)="clear()"  disabled> <h6><b > {{"HOME.CLEAN" | translate}}</b></h6></button>
-      <button class="btn filter" id="filtrar" name="filtrar"  (click)="modal.close()"> <b> {{"HOME.FILTERS" |translate}}</b> </button>
+      <button class="btn clear-filter " id="clear" name="clear"  (click)="clear()"  disabled> <h6><b > {{"BEER.CLEAN" | translate}}</b></h6></button>
+      <button class="btn filter" id="filtrar" name="filtrar"  (click)="modal.close()"> <b> {{"BEER.FILTERS" |translate}}</b> </button>
      
   </div>
 
@@ -57,7 +57,7 @@
 </ng-template>
 <ng-template #filterPrice let-modal>
  <div class="modal-header ">
-  <h1 class="modal-title"> <b> {{'HOME.FILTER.PRICE' | translate}}</b></h1>
+  <h1 class="modal-title"> <b> {{'BEER.FILTER.PRICE' | translate}}</b></h1>
   <button class="btn btn-close" (click)="modal.dismiss()"></button>
 </div>
 <div class="modal-body ">
@@ -74,8 +74,8 @@
 </table>
 </div>
 <div class="footer-modal">
-  <button class="btn clear-filter " id="clearPrice" name="clear"  (click)="clearPrice()"  [disabled]="true"> <h6><b > {{"HOME.CLEAN" | translate}}</b></h6></button>
-  <button class="btn filter" id="filtrar" name="filtrar"  (click)="modal.close()"> <b> {{"HOME.FILTERS" |translate}}</b> </button>
+  <button class="btn clear-filter " id="clearPrice" name="clear"  (click)="clearPrice()"  [disabled]="true"> <h6><b > {{"BEER.CLEAN" | translate}}</b></h6></button>
+  <button class="btn filter" id="filtrar" name="filtrar"  (click)="modal.close()"> <b> {{"BEER.FILTERS" |translate}}</b> </button>
  
 </div>
   
