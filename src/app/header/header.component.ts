@@ -6,7 +6,14 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  /**
+   * Variable que almecena el lenguaje activo 
+   */
   public activeLang;
+  /**
+   * Variable boolean que ayudará a saber su fue seleccionado el menu 
+   */
+  menu=false;
   constructor(private translate:TranslateService) { 
     
     this.activeLang = this.translate.currentLang
@@ -15,12 +22,22 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
   /**
-   * Variable que contiene el titulo de la app
+   * Función usada para traducir la pagina
    */
-  title = 'Cervezas';
+
   
   public changeLang(lang:string) {
     this.activeLang = lang;
     this.translate.use(lang);
+  }
+  /**
+   * Función que cambia el valor de menu cuando sea clickeado.
+   */
+  public Menu() {
+    if (this.menu==false) {
+      this.menu=true
+    }else{
+      this.menu=false
+    }
   }
 }

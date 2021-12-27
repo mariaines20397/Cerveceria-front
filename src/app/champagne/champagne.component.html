@@ -2,47 +2,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow+Semi+Condensed:ital,wght@0,300;0,600;0,900;1,100;1,700&family=Patrick+Hand&family=Satisfy&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
 <div class="body">
-
-  <img class="portada" src="../../assets/img/portada_cerveza.jpg" alt="" srcset="">
-  <img class="logo-portada" src="../../assets/svg/logo_portada.svg" alt="" srcset="">
-  <div class="presentacion">
-    <p> {{"HOME.1" | translate}}</p>
-  <p> {{"HOME.2" | translate}}</p>
-  {{"HOME.3" | translate}}</div>
-
-  <div class="title">
-    <h2>{{"HOME.DRINKS" | translate}}</h2>
-  </div>
-  
-    <div class="container-lg">
-  <div class="card-lg" >
+    <div class="title" >
     
-    <div class="img-drink" ><img [routerLink]="['/beer']" src="../../assets/img/beer/beers.jpg" alt="" srcset=""></div>
-    <div class="card-body">
-    <h3 class="title-drink" [routerLink]="['/beer']">{{"BEER.TITLE" | translate}}</h3></div>
-  </div>
-  <div class="card-lg" >
-    
-    <div class="img-drink" ><img [routerLink]="['/champagne']" src="../../assets/img/champagne/champagnes.jpg" alt="" srcset=""></div>
-    <div class="card-body">
-    <h3 class="title-drink" [routerLink]="['/champagne']">{{"CHAMPAGNE.TITLE" | translate}}</h3></div>
-  </div>
-  <div class="card-lg" >
-    
-    <div class="img-drink" ><img [routerLink]="['/vodka']" src="../../assets/img/vodka/vodkas.jpg" alt="" srcset=""></div>
-    <div class="card-body">
-    <h3 class="title-drink" [routerLink]="['/vodka']">{{"VODKA.TITLE" | translate}}</h3></div>
-  </div>
-</div>
-  <!-- 
- <div class="title" >
-    
-    <h1 [routerLink]="['/']" id='title'>{{'HOME.TITLE' | translate}}</h1>
-    
-</div>
+        <h1 [routerLink]="['/']" id='title'>{{'CHAMPAGNE.TITLE' | translate}}</h1>
+        
+    </div>
 <div class="container-lg  container-xs">
   
-    <div class="card-lg card-xs " *ngFor="let product of arrProducts" >
+    <div class="card-lg card-xs " *ngFor="let product of arrchampagne" >
         <img src="{{product.img}}" class="card-img-top img-beer" alt="...">
         <div class="card-body">
           <h5 class="card-title"> <b> {{product.name}} </b></h5>
@@ -54,20 +21,14 @@
         <a href="#" class="btn btn-add " > <b> {{'HOME.ADD' | translate}} </b></a>
       </div>
       
-      <div class="card-lg card-xs card-vinos" >
-        <div class="card-body">
-          <p class="card-text">{{"HOME.CONTINUE" | translate}}</p>
-          <h5 class="card-title">{{"HOME.WINE" | translate}}</h5>
-        </div> 
-       
-      </div>
+      
  
      
 </div>
 </div>
 
-<ng-template #filter let-modal >-->
- <!-----------------------------------MODAL FILTRO TIPO DE CER-------------------------
+<ng-template #filter let-modal >
+ <!-----------------------------------MODAL FILTRO TIPO DE CER---------------------------->
   <div class="modal-header ">
     <h1 class="modal-title"> <b> {{'HOME.FILTER' | translate}}</b></h1>
     <button class="btn btn-close" (click)="modal.dismiss()"></button>
@@ -76,7 +37,7 @@
     <table class="table table-sm table-hover modal-table" id="table">
       
       <tbody class="tbody-modal">
-        <tr *ngFor="let filter of productFilter;index as i">
+        <tr *ngFor="let filter of champagneFilter;index as i">
           <th class="type-filter"> <h5> <b> {{filter.name}}  </b> </h5> </th>
           <th class="options" > <input type="{{filter.type}}" value="{{filter.id}}"   (click)="filtrar($event)" (click)="activarBtn()" [checked]="filter.checked" id="option" name="option">  </th>
       
@@ -94,6 +55,7 @@
 
   
 </ng-template>
+
 <ng-template #filterPrice let-modal>
  <div class="modal-header ">
   <h1 class="modal-title"> <b> {{'HOME.FILTER.PRICE' | translate}}</b></h1>
@@ -133,5 +95,5 @@
   <label for="btn-filt"> <img src="../../assets/svg/filters.svg" alt="" srcset="" ></label>
  
   
-  </div>--->
+  </div>
 </div>

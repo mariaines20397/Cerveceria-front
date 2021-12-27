@@ -2,8 +2,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow+Semi+Condensed:ital,wght@0,300;0,600;0,900;1,100;1,700&family=Satisfy&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
 <div class="header ">
-    <div class="menu"><button class="btn"><img src="../../assets/svg/menu.svg" alt="" srcset=""></button></div>
-    <div class="logo"><img src="../../assets/svg/logo.svg" alt="" srcset=""></div>
+    <div class="menu"><button class="btn" (click)="Menu()"><img src="../../assets/svg/menu.svg" alt="" srcset=""></button></div>
+    <div class="logo" [routerLink]="['/']"><img src="../../assets/svg/logo.svg" alt="" srcset=""></div>
 
     <div class=" lang">
         <input type="checkbox"  id="btn-lang">
@@ -22,11 +22,14 @@
     <div class="search"><button class="btn"><img src="../../assets/svg/search.svg" alt="" srcset=""></button></div>
     
 </div>
-<div class="title" >
-    
-    <h1 [routerLink]="['/']" id='title'>{{'TITLE' | translate}}</h1>
-    
+<div *ngIf="menu" class="abrirMenu">
+    <div class="listMenu">
+        <div><button class="btn" [routerLink]="['/beer']"><h4>{{'BEER.TITLE' | translate}}</h4></button></div>
+        <div><button class="btn" [routerLink]="['/vodka']"><h4>{{'VODKA.TITLE' | translate}}</h4></button></div>
+        <div><button class="btn" [routerLink]="['/champagne']"><h4>{{'CHAMPAGNE.TITLE' | translate}}</h4></button></div>
+    </div>
 </div>
+
 
 
 
