@@ -3,12 +3,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow+Semi+Condensed:ital,wght@0,300;0,600;0,900;1,100;1,700&family=Satisfy&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
 <div class="header ">
     <div class="menu"><button class="btn" (click)="Menu()"><img src="../../assets/svg/menu.svg" alt="" srcset=""></button></div>
-    <div class="logo" [routerLink]="['/']"><img src="../../assets/svg/logo.svg" alt="" srcset=""></div>
+    <div class="logo" ><button class="btn" [routerLink]="['/']"><img src="../../assets/svg/logo.svg" alt="" srcset=""></button></div>
 
     <div class=" lang">
         <input type="checkbox"  id="btn-lang">
         <div class="btn-lang">
-            <label for="btn-lang"> <b> {{"HEADER.IDIOM" | translate}} </b> </label>
+            <button class="btn">
+                <img src="../../assets/img/mundo.png" alt="" srcset=""><br>
+                
+            <label class="btn-title" for="btn-lang"> <b> {{"HEADER.IDIOM" | translate}} </b> </label></button>
             
         </div>
         <div class="option-lang">
@@ -18,7 +21,7 @@
     
     </div>
 
-    <div class="cart"><button class="btn"><img src="../../assets/svg/cart.svg" alt="" srcset=""></button></div>
+    <div class="cart"><button class="btn" [routerLink]="['/cart']"><img src="../../assets/svg/cart.svg" alt="" srcset=""></button></div>
     <div class="search"><button class="btn"><img src="../../assets/svg/search.svg" alt="" srcset=""></button></div>
     
 </div>

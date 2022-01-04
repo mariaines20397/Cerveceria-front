@@ -1,22 +1,16 @@
 @import '../../styles.scss';
 
 .body{
-   // position: relative;
     background: $dark;
-    font-family: $font-family;
-    
-  // width: 100%;
-   
-   // margin: 0;
-  //  padding: 0;
-    
+    font-family: $font-family-body;
 }
 .portada{
     width: 100%;
-  //  position: absolute;
- //   z-index: -10px;
-
+    transition-property: opacity, left, top, height;
+  transition-duration: 3s, 5s;
+    
 }
+
 .logo-portada{
     position: absolute;
     top: 80px;
@@ -31,11 +25,12 @@
     z-index: 10px;
     color: $white;
     
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     width: 700px;
     text-align: center;
 }
 .title{
+    
     h2{
         padding-top: 50px;
         color: $white;
@@ -43,8 +38,10 @@
         text-align: center;
         
     font-size: 3rem;
+    
     }
 }
+
 .container-lg{
     display: grid;
     grid-template-columns: repeat(4,5fr) ;
@@ -53,153 +50,16 @@
     
 }
 .card-lg{
-  //  width: 15rem;
     text-align: center;
-   // border: 1px solid $dark;
-   // border-radius: 1%;
     color: $white;
+    transition: all 100ms linear;
 }
-/*
-.title{
-    text-decoration: none;
-     height: 20vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     background: black;
-     color: white;
-    // font-family: 'Barlow Semi Condensed', sans-serif;
- 
-    
- }
-
-.container-lg{
-    display: grid;
-    grid-template-columns: repeat(4,5fr) ;
-    grid-gap: 15px;
-    
-}
-.card-lg{
-    width: 15rem;
-    text-align: center;
-    border: 1px solid $dark;
-    border-radius: 1%;
-    color: $white;
-}
-.card-body{
-    background: $degrade-card;
-}
-.img-beer{
-    background: $white;    
-}
-.card-text{
-    height: 70px;
-}
-.btn-add{
-   
-    width: 100%;
-   // background: #cc720c;
-   background: $degrade-dorado;
-    color: $white;
-    //border: none;
+.card-lg:hover{
+    border-bottom:2px solid $dorado ;
+    transform: translateY(5px) scale(1.1)
     
 }
 
-#btn-filt{
-    display: none;
-}
-.filt{
-    
-     position: fixed;
-     bottom: 20px ;
-     right: 35px;
-     text-align: center;
-    
-    // background: $white;
-     
- }
- .option-filt p, .div-filter{
-     display: block;
-     //background: $white;
-     color: $white;
-     height: 55px;
-     width: 55px;
-     text-align: center;
-     border-radius: 50%;
-     transition: all 500ms ease;
- }
- 
- .div-filter:hover{
-    background: $hover-filter;
- }
- .option-filt p{
-     margin-bottom: -15px;
-     opacity: 0;
-     visibility: hidden;
- }
- #btn-filt:checked~ .option-filt p{
-     margin-bottom: 10px;
-     opacity: 1;
-     visibility: visible;
- }
-
-.card-vinos{
-   
-   grid-column: 1/ span 2;
-}
-.btn-close{
-    position: absolute;
-    right: 30px;
-    color: $white;
-}
-.btn-close:hover{
-    color: $white;
-}
-.modal-body {
-    background: $degrade-card;
-    color: $white;
-}
-.tbody-modal{
-    color: $white;
-}
-.modal-header{
-    background: $degrade-dorado;
-    color: $dark;
-    text-align: center;
-}
-.title-table{
-    text-align: center;
-}
-.type-filter{
-   padding-left:80px ;
-}
-.footer-modal{
-    background: $footer-modal;
-    
-    display: flex;
-    justify-content: center;
-}
-.filter{
-    //display: flex;
-    text-align: center;
-    color: $white;
-    width: 120px;
-    background: $medium-blue;
-    margin: 15px;
-
-    
-}
-.clear-filter{
-   background: salmon;
-    text-align: center;
-    color:$white;
-    width: 120px;
-    margin: 15px;
-    border: 2px solid salmon;
-    
-    
-}
-*/
 
 @media screen and (max-width: 768px) {
     .portada{
@@ -275,52 +135,6 @@
         
     }
     
-    /*
-    .container-xs{
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-gap: 3px;
-        
-    }
-    .card-lg{
-        width: 10rem;
-        text-align: center;
-        border: 1px solid $dark;
-        border-radius: 1%;
-        .card-title{
-            font-size: medium;
-        }
-        .card-text{
-            font-size: small;
-        }
-        .card-price{
-            font-size: medium;
-        }
-        
-    }
-    .btn-filter{
-        position: fixed;
-        bottom: 20px ;
-        text-align: center;
-        width: 60px;
-        background: $reverse-hover-filter;
-        
-        border-radius: 50%;
-    }
-    .btn-filter:hover{
-        background: $hover-filter;
-         border: 2px solid $white;
-    }
-    .filt{
     
-        bottom: 5px ;
-        right: 10px;
-        
-    }
-    .div-filter{
-        background: $dark;
-
-     }
-   */
 }
 

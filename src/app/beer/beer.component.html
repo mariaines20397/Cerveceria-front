@@ -1,11 +1,9 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow+Semi+Condensed:ital,wght@0,300;0,600;0,900;1,100;1,700&family=Patrick+Hand&family=Satisfy&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+
 <div class="body">
   <div class="title" >
-    
-    <h1 [routerLink]="['/']" id='title'>{{'BEER.TITLE' | translate}}</h1>
-    
+    <div class="title-chico">
+    <h1  id='title'>{{'BEER.TITLE' | translate}}</h1>
+  </div>
 </div>
 <div class="container-lg  container-xs">
   
@@ -18,7 +16,7 @@
 
           
         </div> 
-        <a href="#" class="btn btn-add " > <b> {{'BEER.ADD' | translate}} </b></a>
+        <button class="btn btn-add" value="{{product.id}}"  ><b> {{'BEER.ADD' | translate}} </b></button>
       </div>
       
       

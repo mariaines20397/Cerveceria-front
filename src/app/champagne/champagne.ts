@@ -14,14 +14,14 @@ export const champagne = [
         "filterId": 2
     },
     {
-        "name": "French Brut Champagne",
+        "name": "French Champagne",
         "description": "A Sparkling wine from Rhone Valley, France.",
         "price": 66481,
         "img": "../../assets/img/champagne/french.png",
         "filterId": 3
     },
     {
-        "name": "Louis Roederer Champagne",
+        "name": "Louis Roederer",
         "description": "A Sparkling Wine from Champagne, France.  ",
         "price": 112487,
         "img": "../../assets/img/champagne/louis_roederer.png",
@@ -35,7 +35,7 @@ export const champagne = [
         "filterId": 2
     },
     {
-        "name": "Champagne Montchenot",
+        "name": " Montchenot",
         "description": "It has a delicate aroma that combines vanilla, honey and notes of peach and apple.",
         "price": 35218,
         "img": "../../assets/img/champagne/montchenot.png",

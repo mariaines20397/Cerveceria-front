@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { beer } from './beer';
 import { ProductService } from '../product.service';
 import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
+import { CarritoService } from '../carrito.service';
 
 @Component({
   selector: 'app-beer',
@@ -10,6 +11,7 @@ import { TranslateService,LangChangeEvent } from '@ngx-translate/core';
   styleUrls: ['./beer.component.scss']
 })
 export class BeerComponent implements OnInit {
+  
 
   /**
    * Array que contiene los elementos de beer.ts usado en la funcion de filtrar y 
@@ -34,6 +36,7 @@ export class BeerComponent implements OnInit {
     * filtrar y filtrarPrice para ser recorrido por for.
     */
    newArray:any=[]
+   
    /**
     * Array para traer los valores de productFilter desde el servicio
     */
@@ -44,14 +47,24 @@ export class BeerComponent implements OnInit {
     */
     
     priceFilter:any[]=[];
+    /**
+     * Array que contendrá el resultado del filter
+     */
+    carrito:any[]=[]
+    /**
+     * Array que contendrá la cantidad de productos seleccionados para agregar al carrito
+     */
+    arrCarrito:any[]=[];
+    arrProductCarrito:any[]=[]
     
+   
     /**
      * Se pasa como parametro del constructor el modal y el servicio
      * @param modal Parametro de tipo NgbModal
      * @param productService Parametro de tipo ProductService
      */
      
-   constructor(public modal:NgbModal, public productService:ProductService, private translate:TranslateService ) {
+   constructor(public modal:NgbModal, public productService:ProductService, public carritoService:CarritoService ) {
      this.productFilter=this.productService.obtenerProductFilter()
      this.priceFilter=this.productService.obtenerPriceFilter()
     }
@@ -153,6 +166,25 @@ export class BeerComponent implements OnInit {
       
        }
    }
+   
+  /* sumarCarrito(event:any){
+    this.type_product=this.arrProductsNew.filter(id => id.id == event.target.value)
+    this.arrCarrito=[]
+    this.arrCarrito.push(this.type_product)
+    for (let i = 0; i < this.arrCarrito.length; i++) {
+      const element = this.arrCarrito[i];
+      for (let i = 0; i < element.length; i++) {
+        const obj = element[i];
+        this.arrProductCarrito.push(obj)
+      }
+    //console.log(this.arrProductCarrito);
+     this.carritoService.transportandoProductos.emit({productos : this.arrProductCarrito});
+    }
+    
+     
+     
+     
+   }*/
  /**
   * Esta funcion activa el boton de clear cuando se activa un checkbox del filtrado de tipo
   * de cerveza.

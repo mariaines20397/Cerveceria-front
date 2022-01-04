@@ -20,6 +20,8 @@ import { CoverageComponent } from './coverage/coverage.component';
 import { ChampagneComponent } from './champagne/champagne.component';
 import { BeerComponent } from './beer/beer.component';
 import { VodkaComponent } from './vodka/vodka.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 export function HttpLoaderFactory(http:HttpClient) {
   return new TranslateHttpLoader(http,'../assets/translate/', '.json');
@@ -28,12 +30,14 @@ export function HttpLoaderFactory(http:HttpClient) {
 const routes: Routes= [
   {path:'',component: HomeComponent, pathMatch:'full'},
   {path: 'contact', component: ContactComponent},
+  {path: 'cart', component: CarritoComponent},
   {path: 'beer', component: BeerComponent},
   {path: 'vodka', component: VodkaComponent},
   {path: 'security-covid', component: SecurityComponent},
   {path: 'howToCall', component: HowtocallComponent},
   {path: 'provider', component: ProviderComponent},
   {path: 'coverage-area', component: CoverageComponent},
+  {path: 'about-us', component: AboutUsComponent},
   {path: 'champagne', component: ChampagneComponent},
   {path: '**', component: ErrorComponent, pathMatch:'full'}
 ]
@@ -52,7 +56,9 @@ const routes: Routes= [
     CoverageComponent,
     ChampagneComponent,
     BeerComponent,
-    VodkaComponent
+    VodkaComponent,
+    AboutUsComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,

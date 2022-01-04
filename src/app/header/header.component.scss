@@ -11,8 +11,8 @@
     overflow: hidden;
 
     h4 {
-        font-family: $font-family;
-    font-size: 1.7rem;
+        font-family: $font-family-body;
+    font-size: 1.3rem;
         color: $white;
     }
 }
@@ -30,18 +30,13 @@
    transition: all 500ms ease;
 }
 .lang{
-    
-    width: 80px;
-    padding-left: 30px;
+    position: absolute;
+   z-index: 10px;
+    left: 150px;
+    top: 2px;
     
 }
-.btn-lang{
-    display: flex;
-    color: $white;
-   
-    line-height: 65px;
-    text-align: center;
-}
+
 
 .option-lang p{
     margin: -5px;
@@ -52,47 +47,47 @@
     margin-bottom: 10px;
     opacity: 1;
     visibility: visible;
+    
 
 }
 .header{
-   // background: radial-gradient(circle,rgb(131, 130, 130),rgb(199, 192, 192));
-   //background: #cc720c;
    background: $degrade-dorado;
-    border: 0.7px solid #1111;
+    border: 0.7px solid $dark;
     height: 70px;
     width: auto;
     display: flex;
     .menu {
         
-     transition: all 200ms ease;
+     
         padding: 10px;
     }
     .menu:hover{
-        background: radial-gradient(circle,rgb(200, 193, 193),rgb(212, 205, 205));
+        background:$header-hover ;
         border-radius: 50%;
     }
     .logo{
-        transition: all 200ms ease;
-        padding: 20px;
+        
+        padding: 10px;
     }
     
     
+    
     .cart{
-        transition: all 200ms ease;
+        
         margin-left: auto;
         padding: 10px;
     }
     .cart:hover{
-        background: radial-gradient(circle,rgb(200, 193, 193),rgb(212, 205, 205));
+        background: $header-hover;
         border-radius: 50%;
     }
     
     .search{
-        transition: all 200ms ease;
+        
         padding: 10px;
     }
     .search:hover{
-        background: radial-gradient(circle,rgb(200, 193, 193),rgb(212, 205, 205));
+        background: $header-hover;
         border-radius: 50%;
     }
     
@@ -104,6 +99,12 @@
     .logo{
         display: none;
     }
+}
+.lang{
+    
+    left: 50px;
+    top: 2px;
+    
 }
 }
 

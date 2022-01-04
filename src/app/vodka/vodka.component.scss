@@ -1,12 +1,16 @@
 @import '../../styles.scss';
-*{
-    
-font-family: $font-family;
-font-size: 1.2rem;
-}
+
 .body{
     background: $dark;
     padding-bottom: 25px;
+    font-family: $font-family-body;
+  
+}
+#title{
+    font-family: $font-family-title;
+    
+   //font-family: 'Lemon', cursive;
+    font-size: 5.3rem;
 }
 .title{
     text-decoration: none;
@@ -14,8 +18,8 @@ font-size: 1.2rem;
      display: flex;
      justify-content: center;
      align-items: center;
-     background: black;
-     color: white;
+     background: $dark;
+     color: $white;
     // font-family: 'Barlow Semi Condensed', sans-serif;
  
     
@@ -31,7 +35,12 @@ font-size: 1.2rem;
     text-align: center;
     border: 1px solid $dark;
     border-radius: 1%;
-    color: $white;
+    //color: $white;
+    color: $dark;
+    transition: all 500ms ease;  
+}
+.card-lg:hover{
+    transform: scale(0.9);
 }
 .card-body{
     background: $degrade-card;
@@ -47,7 +56,8 @@ font-size: 1.2rem;
     width: 100%;
    // background: #cc720c;
    background: $degrade-dorado;
-    color: $white;
+    //color: $white;
+    color: $dark;
     //border: none;
     
 }
@@ -137,12 +147,12 @@ font-size: 1.2rem;
     
 }
 .clear-filter{
-   background: salmon;
+   background: $salmon ;
     text-align: center;
     color:$white;
     width: 120px;
     margin: 15px;
-    border: 2px solid salmon;
+    border: 2px solid $salmon;
     
     
 }
@@ -164,7 +174,10 @@ font-size: 1.2rem;
         background: $dark;
 
      }
-    
+     #title{
+        
+        font-size: 4rem;
+    }
    
 }
 
@@ -184,6 +197,10 @@ font-size: 1.2rem;
         background: $dark;
 
      }
+     #title{
+        
+        font-size: 3rem;
+    }
    
 }
 @media screen and (max-width: 360px) {
@@ -199,10 +216,10 @@ font-size: 1.2rem;
         border: 1px solid $dark;
         border-radius: 1%;
         .card-title{
-            font-size: medium;
+            font-size: 12px;
         }
         .card-text{
-            font-size: small;
+            font-size: 12px;
         }
         .card-price{
             font-size: medium;
@@ -232,6 +249,12 @@ font-size: 1.2rem;
         background: $dark;
 
      }
+    
+    #title{
+       
+       font-size: 2.5rem;
+   }
+  
    
 }
 

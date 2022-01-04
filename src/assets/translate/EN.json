@@ -22,6 +22,7 @@
         "POLITICS":"PERSONAL DATA PROCESSING POLICY"
     },
     "CONTACT": {
+        "CONTACT":"Contact us",
         "HEADER": "To prevent the spread of COVID-19, follow these tips:",
         "EMAIL": "Email address",
         "SECURITY": "We'll never share your email with anyone else.",
@@ -72,6 +73,25 @@
     "VODKA":{
        
         "TITLE":"Vodka"
+    },
+    "COVERAGE":{
+        "TITLE":"Coverage area",
+        "BODY":"¡We meet in much of America!"
+    },
+    "PROVIDER":{
+        "TITLE":"These are some of our suppliers"
+    },
+    "ERROR":{
+        "TITLE":"We are sorry..",
+        "BODY":"We can't find the page you want to access."
+    },
+    "ABOUT":{
+        "TITLE":"About Us",
+        "BODY":{
+            "1":"We have been dedicated to the Marketing and Distribution of beverages for more than 10 years.",
+            "2":"Thanks to our trajectory and experience in the field, we have the widest variety of products, brands, in different presentations and sizes.",
+            "3":"We offer quality of service, we ensure the conditions established in terms of delivery and distribution. We have a wide variety of national and imported products for mass consumption."
+        }
     }
     
 }
